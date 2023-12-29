@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 :root{
-    --photo-header: url("/img/Screenshot 2023-12-10 at 1.43.56 PM.png");
+    --photo-header: url("img/Screenshot 2023-12-10 at 1.43.56 PM.png");
 }
 
 * {
