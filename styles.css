@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-:root{
-    --photo-header: url("/img/Screenshot 2023-12-10 at 1.43.56 PM.png");
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -39,7 +35,7 @@ img {
 
 
 header {
-    background: var(--photo-header) no-repeat center center fixed;
+    background: url('img/Screenshot 2023-12-10 at 1.43.56 PM.png') no-repeat center center fixed;
     background-size: cover;
     font-size: 20px;
     height: 80px; /*120 con el logo*/
