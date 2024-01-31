@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+:root{
+    --photo-header: url("/pagina mibu 2/img/Screenshot 2023-12-10 at 1.43.56 PM.png");
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 
@@ -31,14 +36,15 @@ img {
     display: block; /* Elimina espacio adicional debajo de la imagen */
 }
 
+
 /* --------- CABECERA ------------ */
 
 
 header {
-    background: url('img/Screenshot 2023-12-10 at 1.43.56 PM.png') no-repeat center center fixed;
+    background: var(--photo-header) no-repeat center center fixed;
     background-size: cover;
     font-size: 20px;
-    height: 80px; /*120 con el logo*/
+    height: 70px; /*120 con el logo*/
     width: 100%;
     position: fixed;
     left: 0;
@@ -59,8 +65,17 @@ header {
 /*-------------- MENU DE CABECERA ------------*/
 
 a{
+    color: inherit; /* Heredar el color del texto del elemento padre */
+    text-decoration: none; /* Eliminar la subrayado por defecto */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón para indicar que es un enlace interactivo */
+}
+
+/* Estilo para los enlaces al pasar el ratón */
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
     text-decoration: none;
 }
+
 
 ul{
     margin: 0;
@@ -82,19 +97,27 @@ nav{
         rgb(0 0 0 / 0%);/*cambio de 8 a 0*/
 }
 
+
 .menu{
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: stretch;
-    height: 70px;
+    align-items: center; /*cambio estaba en stretch*/
+    height:70px;
 }
 
 .menu li{
     display: inline-block;
-    width: 90px;
+    width: auto; /*antes estaba a 90px*/
+    /*de aqui para abajo no estaba*/
+    margin: 0 10px;
+    text-align: center;
+    line-height: 70px;
 }
+
+/*este bloque antes no estaba*/
+
 
 .menu li:hover .submenu{
     height: 85px; /*85px*/
@@ -151,7 +174,7 @@ nav{
 }
 
 .menu > li > a::before{
-    top: 25px;/*cambio*/
+    top: 25px;/*cambio*//*segundo cambio antes estaba en 25px*/
     content: "";
     position: absolute;
     width: 100%;
@@ -182,7 +205,7 @@ footer {
 }
 */
 
-footer{
+.footer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,6 +215,23 @@ footer{
     background-color: #4895ef;
     text-align: center;
     padding: 3px;
+
+    opacity: 0;
+    transition: transform .3s ease, opacity .3s ease;/*le estamos agregando la transicion que dure 0.3 segundo y con ease osea rapido*/
+    /*de arriba, que no se mueva en x pero en y a -100%*/
+    transform: translate(0,100%); /*recibe x y y, como quiero que se mueva respecto a x y y*/
+    /*de abajo
+    transform: translate(0,100%);
+    que salga de la derecha
+    transform: translate(100%, 0)
+    que salga de la izquierda
+    transform: translate(-100%, 0)
+    */
+}
+
+.footer.is-active{
+    transform: translate(0,0);
+    opacity: 1;
 }
 
 
@@ -253,7 +293,7 @@ footer{
     width: 8px;
     background: #ffffff;
     bottom: -3px;
-    left: 50%;
+    left: 50%; /*50*/
     transform: translate(-50%) rotate(45deg);
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -273,17 +313,17 @@ footer{
 .facebook {
     --color: #1877f2;
 }
-.twitter {
-    --color: #1da1f2;
-}
 .instagram {
     --color: #e4405f;
 }
-.github {
-    --color: #333333;
-}
 .youtube {
     --color: #cd201f;
+}
+.spotify{
+    --color: #1DB954;
+}
+.deezer{
+    --color: #ff6000;
 }
 
 .icon:hover,
@@ -293,3 +333,60 @@ footer{
     color: white;
 }
 
+/*************  Formulario  ******************/
+
+.contact-form{
+    --form-ok-color: #4caf50;
+    --form-error-color: #f44336;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.contact-form > *{
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+
+}
+
+.contact-form textarea{
+    resize: none;
+}
+
+.contact-form legend,
+.contact-form-response{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea{
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.contact-form input[type="submit"]{
+    width: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form [required]:valid {
+    border: thin solid var(--form-ok-color);
+}
+
+.contact-form [required]:invalid {
+    border: thin solid var(--form-error-color);
+}
+
+#contacto{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: #1877f2;
+}
