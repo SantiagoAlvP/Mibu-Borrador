@@ -12,18 +12,11 @@
         <!-- <img src="/pagina mibu 2/img/PPT_Garmex_V4__1__page-0001-removebg-preview.png" alt="logo" class="logo-centered"> -->
         <nav>
             <ul class="menu">
-                <li><a href="#servicios">About</a></li>
-                <li><a href="#">Works</a></li>
-                <li>
-                    <a href="#">Skills</a>
-                    <ul class="submenu">
-                        <li><a href="#">React</a></li>
-                        <li><a href="#">Svelte</a></li>
-                        <li><a href="#">VueJs</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#servicios">Servicios</li>
+                <li><a href="#regalias">Regalías</a></li>
+                <li><a href="#distribucion">Distribución</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -36,36 +29,61 @@
         <img src="img/Img_Servicios_MIBU.jpg" alt="Imagen Servicios">
     </section>
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Ponte en contacto con nosotros a través de...</p>
-        <!-- Puedes agregar un formulario de contacto o detalles de contacto aquí -->
+    <section id="regalias">
+        <img src="img/MIBU-Portafolio 2023_page-0005.jpg" alt="Imagen Regalias">
     </section>
 
-    <footer>
+    <section id="distribucion">
+        <img src="img/MIBU-Portafolio 2023_page-0006.jpg" alt="Imagen Distribucion">
+    </section>
+
+    <section id="contacto">
+        <h1>
+            <form class="contact-form">
+                <legend>Contacta con nosotros</legend>
+                <input type="text" name="name" placeholder="Nombre Completo" title="El nombre sólo acepta letras y espacios en blanco." pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                <input type="email" name="name" placeholder="Correo Electronico" title="Correo incorrecto." pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                <input type="text" name="name" placeholder="País" title="El país sólo acepta letras y espacios en blanco." pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                <input type="text" name="name" placeholder="Célular" title="Digíta sólo números." pattern="^[0-9]+$" required>
+                <textarea name="comments" cols="50" rows="5" placeholder="Mensaje" required></textarea>
+                <input type="submit" name="name" value="Enviar">
+            </form>
+        </h1>
+    </section>
+
+    <footer class="footer is-active">
         <p>&copy; 2023 Mibu - Empresa Musical. Todos los derechos reservados.</p>
         <ul class="wrapper">
-            <li class="icon facebook">
-              <span class="tooltip">Facebook</span>
-              <span><i class="fab fa-facebook-f"></i></span>
-            </li>
-            <li class="icon twitter">
-              <span class="tooltip">Twitter</span>
-              <span><i class="fab fa-twitter"></i></span>
-            </li>
-            <li class="icon instagram">
-              <span class="tooltip">Instagram</span>
-              <span><i class="fab fa-instagram"></i></span>
-            </li>
-            <li class="icon github">
-              <span class="tooltip">Github</span>
-              <span><i class="fab fa-github"></i></span>
-            </li>
-            <li class="icon youtube">
-              <span class="tooltip">Youtube</span>
-              <span><i class="fab fa-youtube"></i></span>
+            <a href="https://www.facebook.com/hearthevibescol/" target="_blank">
+                <li class="icon facebook">
+                    <span class="tooltip">Facebook</span>
+                    <span><i class="fab fa-facebook-f"></i></span>
+                </li>
+            </a>
+            <a href="https://www.instagram.com/mibumusic/" target="_blank">
+                <li class="icon instagram">
+                <span class="tooltip">Instagram</span>
+                <span><i class="fab fa-instagram"></i></span>
+                </li>
+            </a>
+            <a href="https://www.youtube.com/channel/UC_SZvhP4KxdKUsDvjoNyBLw/" target="_blank">
+                <li class="icon youtube">
+                    <span class="tooltip">Youtube</span>
+                    <span><i class="fab fa-youtube"></i></span>
+                </li>
+            </a>
+            <a href="https://open.spotify.com/user/zj6f9m0h7hjwjfmg5a0fsdhss?si=65d51981b5374158/" target="_blank">
+                <li class="icon spotify">
+                    <span class="tooltip">Spotify</span>
+                    <span><i class="fab fa-spotify"></i></span>
+                </li>
+            </a>
+            <li class="icon deezer">
+                <span class="tooltip">Deezer</span>
+                <span><i class="fab fa-deezer"></i></span>
             </li>
         </ul>
     </footer>
+    <script src="/pagina mibu 2/js/index.js" type="module"></script>
 </body>
 </html>
